@@ -1,5 +1,7 @@
 # EASY DB (working name)
 
+> Note to future Bob: Don't give up on this. So far it's going really well. There is no need to 'start over' again. Just keep going.
+
 ## What is it?
 
 EasyDB is a simple, easy to use, database for storing and retrieving data. It is designed to be easy to use for front-end work with very little setup.
@@ -19,3 +21,7 @@ I often have product ideas that require a database, but I don't want to spend a 
 ## Will it work?
 
 Honestly? Who knows...
+
+## Plans for hosting
+
+This project should be hosted on Supabase. Supabase is a great service that provides a Postgres database with a simple API. It's a great fit for this project.
