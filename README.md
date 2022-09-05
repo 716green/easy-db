@@ -2,6 +2,10 @@
 
 > Note to future Bob: Don't give up on this. So far it's going really well. There is no need to 'start over' again. Just keep going.
 
+## How to start the dev server
+
+`docker-compose up` to start the server.
+
 ## What is it?
 
 EasyDB is a simple, easy to use, database for storing and retrieving data. It is designed to be easy to use for front-end work with very little setup.
