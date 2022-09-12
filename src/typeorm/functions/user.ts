@@ -20,20 +20,23 @@ export const createUser = async (email: string): Promise<User | void> => {
   }
 };
 
-export const getUsers = async (userId?: number, email?: string) => {
+export const getUsers = async (
+  email?: string,
+  userId?: number
+): Promise<User[]> => {
   const connection = await connect();
   const userRepo = connection.getRepository(User);
 
-  let allUsers;
+  let userData;
   if (!userId && !email) {
-    allUsers = await userRepo.find();
+    userData = await userRepo.find();
   } else if (!!userId && !email) {
-    allUsers = await userRepo.find({ where: { id: userId } });
+    userData = await userRepo.findOne({ where: { id: userId } });
   } else if (!userId && !!email) {
-    allUsers = await userRepo.find({ where: { email } });
+    userData = await userRepo.findOne({ where: { email } });
   } else {
     console.error("Unable to fetch user data");
   }
 
-  return allUsers;
+  return Array.isArray(userData) ? userData : ([userData] as User[]);
 };
